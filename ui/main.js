@@ -19,7 +19,7 @@ img.onclick = function() {
  }, 10);
 };
 */
-
+/*
 var button = document.getElementById('counter') ;
 var counter = 0 ;
 button.onclick = function() {
@@ -28,3 +28,32 @@ button.onclick = function() {
     var span = document.getElementById('count') ;
     span.innerHTML = counter.toString();
 }
+*/
+
+var button = document.getElementById('counter') ;
+button.onclick = function() {
+    
+    // create a request object
+    var request = new XMLHttpRequest() ;
+    
+    // Capture the response and store it in a variable
+    request.onreadstatechange = function() {
+        
+    if(request.readyState === XMLHttpRequest.DONE) {
+        if(request.status === 200){
+            var counter = request.responseText;
+            var span = document.getElementById('count');
+            span.innerHTML = counter.toString() ;
+            
+        }
+    }    
+    
+        
+    };
+    
+    // Make the request
+    request.open('GET', '') ;
+    request.send(null) ;
+
+    
+};
