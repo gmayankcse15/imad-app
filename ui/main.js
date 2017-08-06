@@ -19,7 +19,7 @@ img.onclick = function() {
  }, 10);
 };
 
-
+var counter = 0 ;
 var button = document.getElementById('counter') ;
 button.onclick = function() {
     
