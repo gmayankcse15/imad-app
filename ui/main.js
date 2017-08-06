@@ -1,12 +1,12 @@
 console.log('Loaded!');
 
 var element = document.getElementById('main-text');
-
+var counter = 0 ;
 element.innerHTML = 'New value' ;
 
 
 // Move the image
-
+/*
 var img = document.getElementById('madi');
 var marginLeft = 0 ;
 
@@ -18,8 +18,8 @@ img.onclick = function() {
     img.style.marginLeft = marginLeft + 'px' ;
  }, 10);
 };
+*/
 
-var counter = 0 ;
 var button = document.getElementById('counter') ;
 button.onclick = function() {
     
