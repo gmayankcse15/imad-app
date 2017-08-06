@@ -1,8 +1,8 @@
-console.log('Loaded!');
+//console.log('Loaded!');
 
-var element = document.getElementById('main-text');
-var counter = 0 ;
-element.innerHTML = 'New value' ;
+//var element = document.getElementById('main-text');
+
+//element.innerHTML = 'New value' ;
 
 
 // Move the image
@@ -21,6 +21,7 @@ img.onclick = function() {
 */
 
 var button = document.getElementById('counter') ;
+var counter = 0 ;
 button.onclick = function() {
     
     counter = counter + 1 ;
