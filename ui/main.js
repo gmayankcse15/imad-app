@@ -14,9 +14,9 @@ var marginLeft = 0 ;
 img.onclick = function() {
  setInterval(function()
  {    console.log('Implemented') ;
-     marginLeft = marginLeft + 10 ;
+     marginLeft = marginLeft + 1 ;
     img.style.marginLeft = marginLeft + 'px' ;
- }, 3000);
+ }, 10);
 };
 
 
