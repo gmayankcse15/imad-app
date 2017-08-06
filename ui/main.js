@@ -18,4 +18,4 @@ img.onclick = function() {
   console.log('Implemented') ;
 };
 
-setInterval(function(){ alert("Hello"); }, 3000);
+
