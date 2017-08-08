@@ -34,7 +34,7 @@ button.onclick = function() {
  
 var button = document.getElementById('counter') ;
 button.onclick = function() {
-       console.log(counter.toString()) ;
+      
     // create a request object
     var request = new XMLHttpRequest() ;
     
@@ -48,7 +48,7 @@ button.onclick = function() {
               
             var counter = request.responseText;
             var span = document.getElementById('count');
-           
+             console.log(counter.toString()) ;
             span.innerHTML = counter.toString() ;
             
         }
