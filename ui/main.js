@@ -40,12 +40,12 @@ button.onclick = function() {
     
     // Capture the response and store it in a variable
     request.onreadstatechange = function() {
-         console.log(counter.toString()) ;
+         console.log("Hello") ;
         
     if(request.readyState === XMLHttpRequest.DONE) {
         if(request.status === 200)
           {
-               console.log(counter.toString()) ;
+              
             var counter = request.responseText;
             var span = document.getElementById('count');
            
