@@ -107,8 +107,9 @@ app.get('/:articleName', function(req, res){
 });
 
 var counter = 0 ;
-app.get('/counter.css', function(req, res){
-   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
+app.get('/counter', function(req, res){
+    
+   res.sendFile(counter.toString());
 });
 
 
