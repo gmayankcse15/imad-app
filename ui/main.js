@@ -34,7 +34,7 @@ button.onclick = function() {
  
 var button = document.getElementById('counter') ;
 button.onclick = function() {
-    console.log("Hello") ;
+ //   console.log("Hello") ;
     // create a request object
     var request = new XMLHttpRequest() ;
     
