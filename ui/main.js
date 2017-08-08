@@ -32,7 +32,7 @@ button.onclick = function() {
 }
 */
  
-var button = document.getElementById('counter') ;
+var button = document.getElementById('submit_btn') ;
 button.onclick = function() {
       
     // create a request object
