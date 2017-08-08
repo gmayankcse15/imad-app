@@ -31,10 +31,10 @@ button.onclick = function() {
     span.innerHTML = counter.toString();
 }
 */
- console.log("Hello") ;
+ 
 var button = document.getElementById('counter') ;
 button.onclick = function() {
-    
+    console.log("Hello") ;
     // create a request object
     var request = new XMLHttpRequest() ;
     
