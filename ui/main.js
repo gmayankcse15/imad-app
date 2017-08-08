@@ -54,7 +54,7 @@ button.onclick = function() {
     };
     
     // Make the request
-    request.open('GET', 'http://gmayank386cse15.imad.hasura-app.io',true) ;
+    request.open('GET', 'http://gmayank386cse15.imad.hasura-app.io/counter',true) ;
     request.send(null) ;
 
     
