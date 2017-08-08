@@ -31,7 +31,7 @@ button.onclick = function() {
     span.innerHTML = counter.toString();
 }
 */
-
+ console.log("Hello") ;
 var button = document.getElementById('counter') ;
 button.onclick = function() {
     
@@ -40,7 +40,7 @@ button.onclick = function() {
     
     // Capture the response and store it in a variable
     request.onreadstatechange = function() {
-         console.log("Hello") ;
+        
         
     if(request.readyState === XMLHttpRequest.DONE) {
         if(request.status === 200)
