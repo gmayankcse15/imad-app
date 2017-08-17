@@ -6,12 +6,12 @@ var Pool = require('pg').Pool ;
 
 var config = {
     user: 'gmayank386cse15',
-    database: 'gmayank386cse15'
-    host: 'http://db.imad.hasura-app.io'
-    port: '5432'
-    password: process.env.DB_PASSWORD
+    database: 'gmayank386cse15',
+    host: 'http://db.imad.hasura-app.io',
+    port: '5432',
+    password: process.env.DB_PASSWORD,
     
-}
+};
 
 var app = express();
 app.use(morgan('combined'));
@@ -121,13 +121,13 @@ app.get('/test-db',function(req, res){
    
    // return a response with the result
     
-    pool.query('SELECT * FROM test', function(err, result)){
+    pool.query('SELECT * FROM test', function(err, result){
         if(err){
-            res.status(500).send(err.toString())
+            res.status(500).send(err.toString());
         }else{
             res.send(JSON.stringify(result.rows)) ;
         }
-    }
+    });
 });
 var counter = 0 ;
 app.get('/counter', function(req, res){
