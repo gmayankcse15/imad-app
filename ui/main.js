@@ -31,7 +31,7 @@ button.onclick = function() {
     span.innerHTML = counter.toString();
 }
 */
- 
+ // submit username and password to login 
 var button = document.getElementById('submit_btn') ;
 button.onclick = function() {
       
@@ -49,7 +49,7 @@ button.onclick = function() {
         //    var span = document.getElementById('count');
          //    console.log(counter.toString()) ;
           //  span.innerHTML = counter.toString() ;
-              var names = request.responseText ;
+            /*  var names = request.responseText ;
               names = JSON.parse(names) ;
   var list = '' ;
   for(var i = 0 ; i < names.length; i++) {
@@ -58,18 +58,32 @@ button.onclick = function() {
   }
   var ul = document.getElementById('namelist') ;
   ul.innerHTML= list ;
-
-        }
-    }    
+*/
+      console.log('user is logged in') ;
+      alert('logged in successsfully');
+          }
+          else if(request.status == 403) {
+           alert('Username/password is incorrect');
+              
+          }else if(request.status == 500){
+              alert("Something went wrong on the server") ;
+          }
+    }
+  
     
         
     };
-    var nameInput = document.getElementById('name');
-     var name = nameInput.value ;
+    var username = document.getElementById('username').value;
+     var password = document.getElementById('password').value ;
+     console.log(username);
+     console.log(password);
     
     // Make the request
-    request.open('GET', 'http://gmayank386cse15.imad.hasura-app.io/submit-name?name='+ name, true) ;
-    request.send(null) ;
+    //request.open('POST', 'http://gmayank386cse15.imad.hasura-app.io/submit-name?name='+ name, true) ;
+    
+    request.open('POST', 'http://gmayank386cse15.imad.hasura-app.io/login', true) ;
+    request.setRequestHeader('Content-Type','application/json') ;
+    request.send(JSON.stringify({username: username, password: password})) ;
 
     
 };
