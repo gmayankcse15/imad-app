@@ -156,7 +156,7 @@ app.post('/login', function(req, res){
                     res.send('credentials are correct');
                 }else
                 {
-                res.send('User successfully created: '+ username) ;
+                res.send('Wrong Password Retry!!') ;
 
                 }
             
