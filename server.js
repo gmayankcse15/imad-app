@@ -3,6 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 
 var Pool = require('pg').Pool ;
+const crypto = require('crypto');
 
 var config = {
     user: 'gmayank386cse15',
@@ -112,6 +113,7 @@ return htmlTemplate ;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+
 
 
 function hash(input, salt){
