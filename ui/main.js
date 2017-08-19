@@ -62,10 +62,10 @@ button.onclick = function() {
       console.log('user is logged in') ;
       alert('logged in successsfully');
           }
-          else if(request.status == 403) {
+          else if(request.status === 403) {
            alert('Username/password is incorrect');
               
-          }else if(request.status == 500){
+          }else if(request.status === 500){
               alert("Something went wrong on the server") ;
           }
     }
